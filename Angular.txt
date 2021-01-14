@@ -1,0 +1,20 @@
+Angular walkthrough
+```````````````````
+Outline :
+
+
+
+
+
+1. Entry pointer to angular application
+                                app.module.ts 
+                                ``````````````
+import {NgModule} from '@angular/core';
+
+@NgModule({
+    declaration: [set Of components],
+    imports: [set of modules],
+    providers: [set of services],
+    bootstrap: [starting component]
+})
+
