@@ -39,18 +39,45 @@
   </div>
 </div>
 <br><br>
+<br>
+<div> 
+  <h3>Add Products to table</h3>
+  <div class="form form-group">
+    
+      Product name : <input type="text"   [(ngModel)]="productName" placeholder="Product name" /> <br>
+      Product price : <input type="number"   [(ngModel)]="productPrice" placeholder="Product price" /> <br>
+      Product name : <input type="text"  [(ngModel)]="productCategory" placeholder="Product category"  /> <br>
+    
+    <br>
+    <button (click)="Adding()">Add Product</button>
+  </div>
+</div>
+
+
+<br>
 <div>
   <h3>Binding complex data to view</h3>
   <table class="table table-hover">
     <tr class="bg-primary text-white">
+      <th>Sl.No</th>
       <th>Name</th>
       <th>Price</th>
       <th>Category</th>
+      <th>Like & Dislike</th>
+      <th>Action</th>
     </tr>
-    <tr *ngFor = "let item of products">
+    <tr *ngFor = "let item of products; let index = index; let first = first; let last=last; let e= even; let o = odd; ">
+      <td>{{index + 1}}</td>
       <td>{{item.name}}</td>
       <td>{{item.price}}</td>
       <td>{{item.category}}</td>
+      <td>
+        <button class="btn btn-success" (click)="Likes(item)">Like-{{item.likes}}</button> &nbsp;
+        <button class="btn btn-danger" (click)="Dislike(item)">Dislike-{{item.dislikes}}</button>
+      </td>
+      <td>
+        <button (click)="delete(index)" class="btn btn-danger">Delete</button>
+      </td>
     </tr>
   </table>
 </div>
@@ -71,5 +98,7 @@
     </div>
   </div>
 
+  <br><br><br>
+  <app-todo></app-todo>
 
 </div>

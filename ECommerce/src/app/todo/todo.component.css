@@ -1,0 +1,19 @@
+.todo {
+    text-align: center;
+}
+.first {
+    background-color: blue;
+    color: white;
+}
+.last {
+    background-color: red;
+    color: white;
+}
+.even {
+    background-color: yellow;
+    color: white;
+}
+.odd {
+    background-color: skyblue;
+    color: white;
+}

@@ -1,3 +1,11 @@
 .app {
     text-align: center;
 }
+.f {
+    background-color: red;
+    color: white;
+}
+.l {
+    background-color: yellow;
+    color: white;
+}
