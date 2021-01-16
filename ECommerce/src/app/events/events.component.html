@@ -1,0 +1,52 @@
+<div>
+<h2 class="text-center text-primary">Amazon Shopping</h2>
+<div class="form-group">
+    <label for="">Select a category</label>
+    <div>
+        <select class="form-control" (change)="ChangeCategory()" [(ngModel)]="selectCategory">
+            <option *ngFor="let category of selectCategory" >{{category}}</option>
+        </select>
+    </div>
+</div>
+</div>
+<div>
+    <h3>Working on Pipe</h3>
+    <div>
+        <h6>uppercase pipe : {{data}} to {{data | uppercase}}</h6>
+        <p>lowercase pipe :{{lowerCase | lowercase}}</p>
+        <p>percent pipe : {{number | percent : ''}}</p>
+        <p>percent pipe : {{number | currency}}</p>
+        <p>percent pipe : {{number | currency: 'INR'}}</p>
+        <p>percent pipe : {{number | currency: '&#8377;'}}</p>
+        <p>percent pipe : {{ mfd | date}}</p>
+        <p>percent pipe : {{ mfd | date : 'short'}}</p>
+        <p>percent pipe : {{ mfd | date : 'medium'}}</p>
+        <p>percent pipe : {{ mfd | date : 'long'}}</p>
+        <p>percent pipe : {{ mfd | date : 'd mm yy'}}</p>
+        <p>percent pipe : {{ data | slice: 0: 3 }}</p>
+        <p>percent pipe : {{ data | sentencecase }}</p>
+        <p></p>
+    </div>
+    <div>
+        <h3>Service in Angular</h3>
+        <p>{{code}}</p>
+        <table class="table table-hover;">
+            <thead>
+                <tr>
+                    <td>sl.no.</td>
+                    <td>product name</td>
+                    <td>product price</td>
+                    <td>product category</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pro of products;  let i = index;">
+                    <td>{{i + 1}}</td>
+                    <td>{{pro.name}}</td>
+                    <td>{{pro.price}}</td>
+                    <td>{{pro.category}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

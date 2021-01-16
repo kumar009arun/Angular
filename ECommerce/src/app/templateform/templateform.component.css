@@ -1,0 +1,6 @@
+.validStyle {
+    border : 1px solid green;
+}
+.invalidStyle {
+    border: 1px solid red;
+}

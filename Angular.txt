@@ -18,3 +18,23 @@ import {NgModule} from '@angular/core';
     bootstrap: [starting component]
 })
 
+template form :
+
+    ngForm, ngModel => FormsModule => @angualr/forms
+
+
+Reactive forms/ Model driven form 
+`````````````````````````````````
+
+1. Angular support the fraeworks MVC and MVVM , where data is represnted and handled by "Model".
+2. Reactive forms can be asynchronous .
+3. Reactive form :
+    ReactiveFormsModule => @angular/forms. 
+    Form elements => implemented => Form Control(Base class).
+    syntax : public name = new FormControl('Value');
+    Binded by : formcontrol property.
+    syntax : <input type="text" [FormControl]="name" />
+
+4. Value updating dynamically setValue() patchValue().
+
+    
