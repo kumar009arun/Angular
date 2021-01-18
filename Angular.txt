@@ -29,12 +29,24 @@ Reactive forms/ Model driven form
 1. Angular support the fraeworks MVC and MVVM , where data is represnted and handled by "Model".
 2. Reactive forms can be asynchronous .
 3. Reactive form :
-    ReactiveFormsModule => @angular/forms. 
-    Form elements => implemented => Form Control(Base class).
-    syntax : public name = new FormControl('Value');
-    Binded by : formcontrol property.
-    syntax : <input type="text" [FormControl]="name" />
 
-4. Value updating dynamically setValue() patchValue().
+ReactiveFormsModule => @angular/forms. 
+
+
+Base class : Form Control
+syntax : public name = new FormControl('value');
+
+Binding : 
+syntax : <input type="text" [FormControl]="name"/>
+
+Mechanism :
+setValue(), patchValue()
+syntax: this.name.setValue('arun');
 
     
+
+Routing in Angular :
+```````````````````
+class : Routes , RouterModule, ActivatedRoute
+library : @angular/routes 
+
